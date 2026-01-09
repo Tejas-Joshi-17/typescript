@@ -1,0 +1,42 @@
+------------------------------------------------------------------------------------------------------------------------
+Types in Typescript :- 
+------------------------------------------------------------------------------------------------------------------------
+
+Primitive Type :-
+
+   - a) any: Used for store anything of any datatype.
+   - b) undefined
+   - c) void 
+   - d) unknown
+   - e) number: Represents both integers and floating-point numbers (e.g., 10, 3.14).
+   - f) string: Represents text values enclosed in single or double quotes (e.g., "Hello, world!").
+   - g) boolean: Represents logical values, either true or false.
+   - h) bigint: A more recent addition, supporting arbitrarily large integers (e.g., 9007199254740991n).
+   - i) symbol: Used for creating unique identifiers (e.g., const mySymbol = Symbol("uniqueKey")).
+
+------------------------------------------------------------------------------------------------------------------------
+
+User-Defined Types :-
+
+   - a) Arrays: Ordered collections of elements of the same type, enclosed in square brackets (e.g., number[], string[]).
+   - b) Tuples: Fixed-length arrays with specific element types (e.g., [number, string]).
+   - c) Enums: Named constants for representing a set of fixed values (e.g., enum Color { Red, Green, Blue }).
+   - d) Interfaces: Define the structure of objects, specifying their properties and methods without providing implementations (e.g., interface Person { name: string; age: number; }).
+   - e) Classes: Blueprints for creating objects with properties and methods, combining data and behavior (e.g., class User { constructor(public name: string) {} }).
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+JavaScript :-     let a = 10
+                  a = "Tejas Joshi"         <----- No Error 
+
+TypeScript :-     let a = 10
+                  a = "Tejas Joshi"         <----- Error :- Type 'string' is not assignable to type 'number'.
+
+                  let a:number = 10
+                  a = "Tejas Joshi"         <----- Error :- Type 'string' is not assignable to type 'number'.
+
+                  let a:any = 10
+                  a = "Tejas Joshi"         <----- No Error 
+
+------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,20 @@
+------------------------------------------------------------------------------------------------------------------------
+Class in Typescript :-  void|string|number|boolean
+------------------------------------------------------------------------------------------------------------------------
+
+
+class User{
+    name : string
+    constructor (fullName : string){
+        this.name = fullName 
+     }
+    getName = () : void => {
+        console.log(`Hello Everyone, My Name is :- ${this.name}`)
+    }
+}
+
+let a1 = new User("Tejas Joshi")
+a1.getName()                   <------ Hello Everyone, My Name is :- Tejas Joshi
+
+
+------------------------------------------------------------------------------------------------------------------------

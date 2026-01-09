@@ -1,0 +1,45 @@
+------------------------------------------------------------------------------------------------------------------------
+Function in Typescript :-  void|string|number|boolean
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a = ():string =>{
+    return "Tejas Joshi"
+}
+
+console.log(a())                   <------ Tejas Joshi
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a = (Name:string):string =>{
+    return `Hello Everyone, My Name is :- ${Name}`
+}
+
+console.log(a("Tejas Joshi"))       <---- Hello Everyone, My Name is :- Tejas Joshi
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a = (firstName : string, lastName : string):string =>{
+    return `Hello Everyone, My Name is :- ${firstName}  ${lastName} `
+}
+
+console.log(a("Tejas", "Joshi"))     <----- Hello Everyone, My Name is :- Tejas Joshi
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a = (firstName : string, lastName ? :string) : string =>{
+    let fullName = lastName ? `${firstName} ${lastName} `:`${firstName} `
+    return `Hello Everyone, My Name is :- ${fullName}`
+}
+
+console.log(a("Tejas", "Joshi"))     <----- Hello Everyone, My Name is :- Tejas Joshi
+console.log(a("Sachin"))             <----- Hello Everyone, My Name is :- Sachin
+
+
+------------------------------------------------------------------------------------------------------------------------

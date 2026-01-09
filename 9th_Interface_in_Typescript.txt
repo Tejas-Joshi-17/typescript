@@ -1,0 +1,48 @@
+------------------------------------------------------------------------------------------------------------------------
+Interface in Typescript :- 
+------------------------------------------------------------------------------------------------------------------------
+
+
+interface User {
+    Name : string,
+    Age : number,
+    Gender : boolean,
+    getName : (name:string) => string
+}
+
+let Tejas:User = {
+    Name : `Tejas Joshi`,
+    Age : 22,
+    Gender : true,
+    getName : (Name)=>{
+        return `Hi My Name is :- ${Name}`
+    }
+}
+
+console.log(Tejas.getName("Tejas Dattatray Joshi"))
+Hi My Name is :- Tejas Dattatray Joshi
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+interface People{
+    Name : string,
+    getName : (name:string) => string
+}
+
+class User implements People {
+    Name = `Tejas Joshi`;
+    Age = 22;
+    Gender = true;
+    getName = (Name)=>{
+        return `Hi My Name is :- ${Name}`
+    }
+}
+
+
+let Tejas = new User()
+
+console.log(Tejas.getName("Tejas Dattatray Joshi"))
+Hi My Name is :- Tejas Dattatray Joshi
+
+------------------------------------------------------------------------------------------------------------------------

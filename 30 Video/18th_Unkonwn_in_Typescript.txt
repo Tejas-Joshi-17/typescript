@@ -1,0 +1,56 @@
+------------------------------------------------------------------------------------------------------------------------
+Unknown in Typescript :- 
+
+- a) Use of 'any' disable power of typescript 
+- b) Hence use 'unknown' instead of 'any'
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a : any
+
+a = `Tejas Joshi`
+a = 25
+
+let b:string = a
+console.log(`The Value of b is :- ${b}`)        <---- The Value of b is :- 25
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a : unknown
+
+a = `Tejas Joshi`
+a = 25
+
+let b:string = a              <----- Error - Type 'unknown' is not assignable to type 'string'.
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a : unknown
+
+a = 25
+a = `Tejas Joshi`
+
+let b:string = a              <----- Error - Type 'unknown' is not assignable to type 'string'.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a : unknown
+
+a = 25
+a = `Tejas Joshi`
+
+let b:string = ''
+
+if(typeof a === "string"){
+    b = a              
+}
+
+console.log(`The Value of b is :- ${b}`)        <---- The Value of b is :- Tejas Joshi
+
+
+------------------------------------------------------------------------------------------------------------------------

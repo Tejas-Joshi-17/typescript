@@ -1,0 +1,43 @@
+------------------------------------------------------------------------------------------------------------------------
+Inference in Typescript :- 
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a = 23               <----- Assume  let a:number = 23
+a = 10.23                <----- No Error
+a = `Tejas Joshi`        <----- Error - Type 'string' is not assignable to type 'number'.
+a = false                <----- Error - Type 'boolean' is not assignable to type 'number'.
+
+
+let b = `Tejas Joshi`    <----- Assume  let b:string = `Tejas Joshi`
+b = `Sachin Tendulkar`   <----- No Error
+b = true                 <----- Error - Type 'boolean' is not assignable to type 'string'.
+b = 10.56                <----- Error - Type 'number' is not assignable to type 'string'.
+
+
+let c = true             <----- Assume  let c:boolean = true
+c = false                <----- No Error
+c = `Tejas Joshi`        <----- Error - Type 'string' is not assignable to type 'boolean'.
+c = 56.789               <----- Error - Type 'number' is not assignable to type 'boolean'.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a;                   <----- Assume  let d:any = true
+a = `Tejas Joshi`        <----- No Error
+a = false                <----- No Error
+a = 56.12                <----- No Error
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a:25
+a = 15.23                              <----- Error - Type '15.23' is not assignable to type '25'.
+console.log(`Value of a :- ${a}`)      <----- Error - Variable 'a' is used before being assigned.
+
+const a = 25
+a = 15.23                              <----- Error - Cannot assign to 'a' because it is a constant.
+console.log(`Value of a :- ${a}`)      <----- Value of a :- 23
+ 

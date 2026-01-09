@@ -1,0 +1,44 @@
+------------------------------------------------------------------------------------------------------------------------
+Inheritence in Typescript :-  void|string|number|boolean
+------------------------------------------------------------------------------------------------------------------------
+
+
+class Parent{
+    Parent_Name:string;
+    
+    constructor(Name:string){
+        this.Parent_Name = Name
+    }
+
+    Get_Parent_Name = ():void =>{
+        console.log(`Parent Value is :- ${this.Parent_Name}`)
+    }
+}
+
+class Child extends Parent{
+    Child_Name:string 
+
+    constructor(Name:string){
+        super(Name)
+        this.Child_Name = Name
+    }
+
+    override Get_Parent_Name = ():void =>{
+        console.log(`Parent Value in Child Class is :- ${this.Parent_Name}`)
+    }
+
+    Get_Child_Name = ():void =>{
+        console.log(`Child Value is :- ${this.Child_Name}`)
+    }
+}
+
+
+let a = new Parent("Tejas Joshi")
+a.Get_Parent_Name()                  <---- Parent VAlue is :- Tejas Joshi
+
+let b = new Child("Sachin Tendulkar")
+b.Get_Parent_Name()                  <---- Parent Value in Child Class is :- Sachin Tendulkar      
+b.Get_Child_Name()                   <---- Child Value is :- Sachin Tendulkar
+
+
+------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,18 @@
+------------------------------------------------------------------------------------------------------------------------
+Literals in Typescript :- 
+------------------------------------------------------------------------------------------------------------------------
+
+
+let Data : "abc" | 125
+
+Data = `Tejas Joshi`      <---- Error - Type '"Tejas Joshi"' is not assignable to type '"abc" | 125'. 
+Data = false              <---- Error - Type 'false' is not assignable to type '"abc" | 125'.
+
+Data = "abc"
+console.log(`The Value of Data is :- ${Data}`)          The Value of Data is :- abc
+
+Data = 125
+console.log(`The Value of Data is :- ${Data}`)          The Value of Data is :- 125
+
+
+------------------------------------------------------------------------------------------------------------------------

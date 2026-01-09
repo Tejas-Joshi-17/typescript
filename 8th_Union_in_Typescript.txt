@@ -1,0 +1,43 @@
+------------------------------------------------------------------------------------------------------------------------
+Union in Typescript 
+------------------------------------------------------------------------------------------------------------------------
+
+
+let User = `Tejas Joshi`
+
+User = `Sachin Tendulkar`          <----- No Error - as User can contain string
+User = 25                          <----- Error    - as User can contain only string
+
+------------------------------------------------------------------------------------------------------------------------
+
+let User : string|number = `Tejas Joshi`
+
+User = `Sachin Tendulkar`          <----- No Error - as User can contain string|number
+User = 10                          <----- No Error - as User can contain string|number
+
+User = true                        <----- Error    - as User can contain only string|number
+
+------------------------------------------------------------------------------------------------------------------------
+
+let User : string|number|boolean = `Tejas Joshi`
+
+User = `Sachin Tendulkar`          <----- No Error - as User can contain string|number|boolean
+User = 10                          <----- No Error - as User can contain string|number|boolean
+User = true                        <----- No Error - as User can contain string|number|boolean
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+let User : any = `Tejas Joshi`
+
+User = `Sachin Tendulkar`          <----- No Error - as User can contain any
+User = 10                          <----- No Error - as User can contain any
+User = true                        <----- No Error - as User can contain any
+
+------------------------------------------------------------------------------------------------------------------------
+
+let apiRequestStatus = 'pending' | 'success' | 'error' = 'pending'
+apiRequestStatus = 'Tejas Joshi'        <---- Error
+apiRequestStatus = 'success'            <---- No Error
+
+------------------------------------------------------------------------------------------------------------------------

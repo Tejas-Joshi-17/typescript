@@ -1,0 +1,103 @@
+TypeScript Installation :- 
+
+a) Install node
+   node --version
+b) Install npm
+   npm --version
+c) Install TypeScript :-  sudo npm install -g typescript
+   tsc --version 
+
+
+1. Make File with ".ts" format
+2. Run it as "tsc File_Name.ts"
+3. ".js" File of that ".ts" File is Created
+
+
+1) Nodemon for Javascript :- nodemon <File_Name.js>
+2) Watch for Typescript   :- tsc <File_Name.ts> --watch 
+
+
+************************************************************************************************************************
+
+
+a) TypeScript :- Typed Language means datatype of variable must be defined
+   E.X. :- Typed LAnguage :- Java, C++, C, etc..
+b) Javascript :- Dynamic Language
+   E.X. :- Dynamic Language :- Python, etc..
+
+************************************************************************************************************************
+
+
+
+Q.1. What is Duplicate Identifier Issue :- 
+Sol :- In TypeScript, a Duplicate Identifier issue occurs when the compiler encounters multiple declarations of the same identifier (variable, function, class, etc.) within the same scope. TypeScript is a statically typed superset of JavaScript, and it enforces stricter rules regarding variable and symbol declarations.
+
+let myVariable: number = 10;
+let myVariable: string = "Hello"; // Duplicate Identifier Issue
+
+n this example, the identifier myVariable is declared twice within the same scope, leading to a Duplicate Identifier issue. The TypeScript compiler will throw an error, preventing the generation of JavaScript code.
+
+To Resove :- simply put :- export {} in top of typescript file
+
+************************************************************************************************************************
+
+
+Q.2. Nodemon for Typescript 
+Sol :- Simply use " tsc <File_Name.ts> --watch
+
+************************************************************************************************************************
+
+
+Q.3. Why Typescript compiler convert let & const to var
+Sol :- Many browser are still old and not support ECMAScript so typescript convert let & const to var
+       at the same time typescript compiler preserve property of let & const 
+
+************************************************************************************************************************
+
+Types in Typescript :- 
+
+-> Primitive Type 
+   - f) any: Used for store anything of any datatype.
+   - b) number: Represents both integers and floating-point numbers (e.g., 10, 3.14).
+   - c) string: Represents text values enclosed in single or double quotes (e.g., "Hello, world!").
+   - d) boolean: Represents logical values, either true or false.
+   - e) bigint: A more recent addition, supporting arbitrarily large integers (e.g., 9007199254740991n).
+   - f) symbol: Used for creating unique identifiers (e.g., const mySymbol = Symbol("uniqueKey")).
+
+-> User-Defined Types
+   - a) Arrays: Ordered collections of elements of the same type, enclosed in square brackets (e.g., number[], string[]).
+   - b) Tuples: Fixed-length arrays with specific element types (e.g., [number, string]).
+   - c) Enums: Named constants for representing a set of fixed values (e.g., enum Color { Red, Green, Blue }).
+   - d) Interfaces: Define the structure of objects, specifying their properties and methods without providing implementations (e.g., interface Person { name: string; age: number; }).
+   - e) Classes: Blueprints for creating objects with properties and methods, combining data and behavior (e.g., class User { constructor(public name: string) {} }).
+
+
+************************************************************************************************************************
+
+
+JavaScript :-     let a = 10
+                  a = "Tejas Joshi"         <----- No Error 
+
+TypeScript :-     let a = 10
+                  a = "Tejas Joshi"         <----- Error :- Type 'string' is not assignable to type 'number'.
+
+                  let a:number = 10
+                  a = "Tejas Joshi"         <----- Error :- Type 'string' is not assignable to type 'number'.
+
+                  let a:any = 10
+                  a = "Tejas Joshi"         <----- No Error 
+
+
+************************************************************************************************************************
+
+Arrays in Typescript :- 
+
+a) let arr = [10, 20, 30, 40]                                    :-  let arr: number[] = [10, 20, 30, 40] 
+b) let arr = [10, "Tejas Joshi", 20, 30, 40]                     :-  let arr: (string|number)[] = [10, "Tejas Joshi", 20, 30, 40] 
+c) let arr = [10, "Tejas Joshi", true, 20, 30, 40]               :-  let arr: (string|number|boolean)[] = [10, "Tejas Joshi", true, 20, 30, 40] 
+d) let arr = [10, "Tejas Joshi", 22.23, true, undefined, false]  :-  let arr: any[] = [10, "Tejas Joshi", 22.23, true, undefined, false]  
+
+************************************************************************************************************************
+
+Objects in Typescript :- 
+

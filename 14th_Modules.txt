@@ -1,0 +1,61 @@
+------------------------------------------------------------------------------------------------------------------------
+Modules in Typescript :-  
+    We cannot create variable/function in two differnet files with same name
+------------------------------------------------------------------------------------------------------------------------
+
+
+Students.ts :- 
+
+class Login{                <------ Error - Duplicate identifier 'Login'.ts(2300)
+    Get_Data(){
+        console.log(`Student Logged-In`)
+    }
+}
+
+
+
+Faculty.ts :- 
+
+class Login{                <------ Error - Duplicate identifier 'Login'.ts(2300)
+    Get_Data(){
+        console.log(`Student Logged-In`)
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Students.ts :- 
+
+export default class Login{                
+    Get_Data(){
+        console.log(`Student Logged-In`)
+    }
+}
+
+
+
+Faculty.ts :- 
+
+export default class Login{                
+    Get_Data(){
+        console.log(`Student Logged-In`)
+    }
+}
+
+
+
+Modules.ts :-
+
+import Faculty from './100th_Faculty'
+import Student from './100th_Student'
+
+let a = new Faculty()
+a.Get_Data()                <------ Faculty Logged-In
+
+let b = new Student()
+b.Get_Data()                <------ Student Logged-In
+
+
+------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,34 @@
+------------------------------------------------------------------------------------------------------------------------
+Generic in Typescript :-  
+    
+- a) Normal Function runs only for specific type of input.
+- b) Generic Function runs for all kind of input.
+------------------------------------------------------------------------------------------------------------------------
+
+
+function Func_1(Name:string):string =>{
+    return Name
+}
+
+
+console.log(Func_1(`Tejas Joshi`))
+
+console.log(Func_1(25))    <----- Error - Argument of type 'number' is not assignable to parameter of type 'string'.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+function Func_2<T>(data:T):T {
+    return data
+}
+
+console.log(Func_2(`Tejas Joshi`))                           <----- Tejas Joshi
+console.log(Func_2(25))                                      <----- 25
+console.log(Func_2(true))                                    <----- true 
+console.log(Func_2({Name:"Tejas Joshi", Age:22}))            <----- { Name: `Tejas Joshi`, Age: 22 }
+console.log(Func_2({Name:"Tejas Joshi", Age:22}.Name))       <----- Tejas Joshi
+console.log(Func_2({Name:"Tejas Joshi", Age:22}.Age))        <----- 22
+
+
+------------------------------------------------------------------------------------------------------------------------

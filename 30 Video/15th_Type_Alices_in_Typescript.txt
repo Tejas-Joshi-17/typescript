@@ -1,0 +1,20 @@
+------------------------------------------------------------------------------------------------------------------------
+Type Alices in Typescript :- 
+------------------------------------------------------------------------------------------------------------------------
+
+
+let a : number | string | undefined
+let b : string | number | undefined
+let c : number | string | undefined 
+let d : string | number | undefined
+
+
+type varType = number | string | undefined
+
+let w : varType
+let x : varType
+let y : varType
+let z : varType
+
+
+------------------------------------------------------------------------------------------------------------------------

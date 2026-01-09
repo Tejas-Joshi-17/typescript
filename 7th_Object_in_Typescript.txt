@@ -1,0 +1,122 @@
+------------------------------------------------------------------------------------------------------------------------
+Object in Typescript :- 
+------------------------------------------------------------------------------------------------------------------------
+
+Typescript :- 
+
+export {}
+
+let User = {
+    Name : "Tejas Joshi",
+    Age : 22,
+    CGPA : 9.15,
+    Male : true
+}
+
+// let User: {
+//     Name: string;
+//     Age: number;
+//     CGPA: number;
+//     Male: boolean;
+// }
+
+User.Name = "Sachin Tendulkar"      <----- No Error - as User.Name can contain string
+User.Age = 46                       <----- No Error - as User.Age can contain number 
+User.CGPA = 10                      <----- No Error - as User.CGPA can contain number
+User.Male = false                   <----- No Error - as User.Male can console boolean
+
+User.Name = 18                      <------ Error - as User.Name can contain only string
+User.Age = "Twenty-Two"             <------ Error - as User.Age can contain only number
+User.CGPA = true                    <------ Error - as User.CGPA can contain only number
+User.Male = "Correct"               <------ Error - as User.Male can contain only boolean
+
+User.Country = "India"              <------ Error - Property 'Country' does not exist on type 
+User.Marks = 95                     <------ Error - Property 'Marks' does not exist on type 
+User.Board_Marks = 9.8              <------ Error - Property 'Board_Marks' does not exist on type 
+User.Gedner = "Male"                <------ Error - Property 'Gedner' does not exist on type 
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Typescript :- 
+
+
+interface Person{
+    Name: string,
+    Age: any,
+    CGPA: number,
+    Male: boolean
+}
+
+let User : Person = {
+    Name : "Tejas Joshi",
+    Age : 22,
+    CGPA : 9.15,
+    Male : true
+}
+
+
+User.Name = "Sachin Tendulkar"     <---- No Error - as User.Name can contain string
+User.Age = 46                      <---- No Error - as User.Age can contain any 
+User.CGPA = 10                     <---- No Error - as User.CGPA can contain number
+User.Male = false                  <---- No Error - as User.Male can console boolean
+
+User.Name = "VIrat Kohli"          <---- No Error - as User.Name can contain string
+User.Age = "Twenty-Two"            <---- No Error - as User.Age can contain any
+
+User.CGPA = 101                    <---- No Error - as User.CGPA can contain number
+User.CGPA = "101"                  <---- Error -    as User.CGPA can contain only number not string
+
+User.Male = false                  <---- No Error - as User.Male can contain number
+User.Male = 45                     <---- Error -    as User.Male can contain only boolean not string
+
+
+User.Country = "India"             <------ Error - Property 'Country' does not exist on type 
+User.Marks = 95                    <------ Error - Property 'Marks' does not exist on type 
+User.Board_Marks = 9.8             <------ Error - Property 'Board_Marks' does not exist on type 
+User.Gedner = "Male"               <------ Error - Property 'Gedner' does not exist on type 
+
+------------------------------------------------------------------------------------------------------------------------
+
+Typescript :- 
+
+
+let User : any = {
+    Name : "Tejas Joshi",
+    Age : 22,
+    CGPA : 9.15,
+    Male : true
+}
+
+
+User.Name = "Sachin Tendulkar"      <---- No Error - as User.Name can contain any
+User.Age = 46                       <---- No Error - as User.Age can contain any
+User.CGPA = 10                      <---- No Error - as User.CGPA can contain any
+User.Male = false                   <---- No Error - as User.Male can contain any 
+
+User.Name = "Virat Kohli"           <---- No Error - as User.Name can contain any
+User.Age = "Twenty-Two"             <---- No Error - as User.Age can contain any
+
+User.CGPA = 101                     <---- No Error - as User.CGPA can contain any
+
+User.Male = false                   <---- No Error - as User.Male can contain any
+
+
+User.Country = "India"              <---- No Error
+User.Marks = 95                     <---- No Error
+User.Board_Marks = 9.8              <---- No Error
+User.Gedner = "Male"                <---- No Error
+ 
+console.log(User)
+{
+  Name: 'Virat Kohli',
+  Age: 'Twenty-Two',
+  CGPA: 101,
+  Male: false,
+  Country: 'India',
+  Marks: 95,
+  Board_Marks: 9.8,
+  Gedner: 'Male'
+}
+
+------------------------------------------------------------------------------------------------------------------------
