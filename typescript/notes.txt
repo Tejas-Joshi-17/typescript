@@ -1,0 +1,10 @@
+----------------------------------------------------------------------------------------------------------------------------------------
+
+1) fileName.ts :-   Normal typescript file 
+2) fileName.d.ts :-  (diclative file)
+                      gives hints & errors
+
+By-deault (.d.ts) file becomes available when we install any library
+but, if not available do this :- 
+1) npm i some-library-name             (usually get requred .d.ts files)
+2) npm i -D @types/some-library-name   (get .d.ts files)

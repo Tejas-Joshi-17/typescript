@@ -68,3 +68,29 @@ console.log(brew({ type: `ginger`, amount: 20 }));            // You are Enjoyin
 
 
 // ------------------------------------------------------------------------------------------------------------------------------------------
+
+// function makeCHai(order : {type : string, sugar : number, strong : boolean}) {
+//     // code
+// }
+
+    
+// function serveChai(order : {type : string, sugar : number, strong : boolean}) {
+//     // code
+// }
+
+type chaiOrder = {
+    type : string,
+    sugar : number,
+    strong : boolean
+};
+
+function makeChaii(order : chaiOrder) {
+    // code
+}
+
+function serveChai(order : chaiOrder) {
+    // code
+}
+
+
+// --------------------------------------------------------------------------------------------------------------------------
